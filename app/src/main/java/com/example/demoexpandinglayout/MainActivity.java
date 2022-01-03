@@ -10,11 +10,11 @@ import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends AppCompatActivity {
     private static final String[] TAB_TITLES = {
-            "Simple",
-            "Accordion",
-            "Recycler",
-            "Horizontal",
-            "Manual",
+//            "Simple",
+//            "Accordion",
+//            "Recycler",
+//            "Horizontal",
+//            "Manual",
             "MyView"
     };
 
@@ -42,22 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return new SimpleFragment();
-                case 1:
-                    return new AccordionFragment();
-                case 2:
-                    return new RecyclerViewFragment();
-                case 3:
-                    return new HorizontalFragment();
-                case 4:
-                    return new ManualFragment();
-                case 5:
-                    return new MyView();
-            }
-
-            throw new IllegalStateException("There's no fragment for position " + position);
+            return new MyView();
         }
 
         @Override

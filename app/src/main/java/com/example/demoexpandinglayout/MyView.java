@@ -27,6 +27,8 @@ public class MyView extends Fragment implements View.OnClickListener {
                 expandableLayout0.expand();
             }
         });
+        expandableLayout0.setOnExpansionUpdateListener((expansionFraction, state) -> rootView.findViewById(R.id.arrow).setRotation(expansionFraction * (-180)));
+
         return rootView;
     }
 
